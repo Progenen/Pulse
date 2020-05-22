@@ -2,27 +2,32 @@ $(document).ready(function(){
     $('.carousel__inner').slick({
         adaptiveHeight: true,
         prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/arrow.png" ></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="images/icons/arrow.png" ></button>',
+		nextArrow: '<button type="button" class="slick-next"><img src="images/icons/arrow.png" ></button>',
+		dotsClass: 'slick-dots slider__dots',
         responsive: [
             {
               breakpoint: 768,
               settings: {
-                dots: true,
-                arrow: false,
+				arrows: false,
+				dots: true
               }
             },
             {
               breakpoint: 600,
               settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2
+				slidesToScroll: 2,
+				arrows: false,
+				dots: true
               }
             },
             {
               breakpoint: 480,
               settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1
+				slidesToScroll: 1,
+				arrows: false,
+				dots: true
               }
             }
         ]

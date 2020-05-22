@@ -28,6 +28,9 @@
     padding: 0;
     margin: 0;
 }
+body, html {
+    overflow-x: hidden;
+}
 @import 'variables';
 @import 'mixins';
 .container {
@@ -37,3 +40,4 @@
     z-index: 1;
 }
 @import 'general';
+@import 'media'
