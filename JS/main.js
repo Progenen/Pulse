@@ -55,16 +55,20 @@ $(document).ready(function(){
 	});
 	$('[data-modal=consultation]').click(()=>{
 		$('.overlay, #consultation').fadeIn();
-	});
-	$('.modal__close').click(()=>{
-		$('.overlay, #consultation, #order, #thanks').fadeOut();
+		$('html').addClass('scroll-hidden');
 	});
 
 	$('.item__btn').each(function(i){
 		$(this).on('click', function(){
 			$('#order .modal__subtitle').text($('.item__name').eq(i).text());
-            $('.overlay, #order').fadeIn('slow');
+			$('.overlay, #order').fadeIn('slow');
+			$('html').addClass('scroll-hidden');
 		});
+	});
+
+	$('.modal__close').click(()=>{
+		$('.overlay, #consultation, #order, #thanks').fadeOut();
+		$('html').removeClass('scroll-hidden');
 	});
 	function valForm(form){
 		$(form).validate({
